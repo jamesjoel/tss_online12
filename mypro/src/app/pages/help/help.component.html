@@ -1,0 +1,28 @@
+<h1>this is help page</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta temporibus, nihil debitis eum quas maiores ducimus, maxime, blanditiis illum autem consequuntur voluptatum quam. Illo pariatur ipsum numquam molestias? Quos, cumque.</p>
+<input type="text" [(ngModel)]="abc"/>
+<Br />
+<Br />
+<input type="Text" [(ngModel)]="fullName" />
+<button class="btn btn-primary" (click)="goToParent()">Go</button>
+
+<app-box [nameChild]="nameParent" [xyz]="abc" [fullName]="tempName"></app-box>
+
+<!-- 
+            Data Sharing B/W Component (Parent/Child)
+        
+            1. @Input (parent to child)  --- event/page load
+            2. @Output (child to parent)    ----- data pass only when any event call not page load
+            3. @ViewChild (child to parent) ------- data pass on page load
+
+
+
+
+
+
+
+
+
+
+
+ -->

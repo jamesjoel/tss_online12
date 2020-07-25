@@ -1,0 +1,35 @@
+<h1>this is about page</h1>
+<p class="{{ hello }}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus animi eos, similique nulla hic itaque neque officia quasi, veritatis reiciendis id numquam! Perspiciatis eveniet, vero adipisci deserunt eaque unde iusto. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid assumenda inventore, sequi ducimus voluptatem eveniet consequuntur provident ipsam cupiditate. Eveniet est mollitia rerum eaque et obcaecati voluptate cumque? Ducimus, ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. In, nulla? Velit nulla at dignissimos ducimus recusandae nam unde. Sequi maxime autem sint dolorem molestiae blanditiis saepe. Error minima distinctio labore! loer
+    
+</p>
+<!-- <tag []===== Directives
+    [(ngModel)]=""
+
+
+
+-->
+<p [class]="hello">hello world</p>
+
+<img src="./assets/images/1.jpg" />
+<img src="{{ imgPath }}" />
+<img [src]="imgPath" />
+
+
+
+<h2>{{ name }}</h2>
+<input type="text" value="{{ name }}" />
+<input type="text" [value]="name" />
+<!--  {{ }} Interpolation -->
+
+<p>{{ stu.name }}</p>
+<p>{{ stu.age }}</p>
+<p>{{ stu.salary }}</p>
+
+<pre>{{ stu | json }}</pre>
+
+<h3>{{ address }}</h3>
+
+<!-- Property Binding -->
+<h4 [innerHTML]="address"></h4>
+
+

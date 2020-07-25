@@ -1,0 +1,13 @@
+<div class="col-md-6 offset-md-3">
+    <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" class="form-control" [(ngModel)]="teacher.name" />
+    </div>
+    <div class="form-group">
+        <label>Salary</label>
+        <input type="text" class="form-control" [(ngModel)]="teacher.salary"/>
+    </div>
+    <Hr />
+    <button class="btn btn-primary" (click)="save()">Add</button>
+</div>
+<app-teacher-table [teachers]="allTeacherData"></app-teacher-table>

@@ -1,0 +1,39 @@
+<h1>this is contact page</h1>
+<!-- One way data binding -->
+
+<h1>{{ name }}</h1>
+<h1 [innerHTML]="name"></h1>
+<input type="text" value="{{ name }}" />
+<Br />
+<Br />
+<input type="text" [value]="name" />
+
+<Br />
+<Br />
+<!-- 2 way data binding -->
+<h2 [innerHTML]="city"></h2>
+<input type="text" [value]="city" />
+<Br />
+<select [(ngModel)]="city">
+    <option value="">Select</option>
+    <option value="indore">indore</option>
+    <option value="bhopal">bhopal</option>
+    <option value="mumbai">mumbai</option>
+    <option value="pune">pune</option>
+</select>
+<Br />
+<Br />
+Select Gender : Male <input type="radio" [(ngModel)]="gender" value="male" />
+                Female <input type="radio" [(ngModel)]="gender" value="female" />
+<Br />
+<Br />
+<Br />
+<h2 [innerHTML]="gender"></h2>
+
+
+Name : <input type="text" [(ngModel)]="user.name" />
+<Br />
+<Br />
+Age : <input type="text" [(ngModel)]="user.age" />
+<br />
+<pre>{{ user | json }}</pre>
