@@ -24,6 +24,8 @@ import { TeacherTableComponent } from './shared/teacher-table/teacher-table.comp
 import { BlockComponent } from './shared/block/block.component';
 import { EmployeeComponent } from './pages/employee/employee.component';
 import { AddnewComponent } from './pages/employee/shared/addnew/addnew.component';
+import { DeleteComponent } from './pages/employee/shared/delete/delete.component';
+
 
 @NgModule({ // Decorator
   declarations: [ // component, pipes, directive, guard, intersecptor
@@ -42,7 +44,8 @@ import { AddnewComponent } from './pages/employee/shared/addnew/addnew.component
     TeacherTableComponent,
     BlockComponent,
     EmployeeComponent,
-    AddnewComponent
+    AddnewComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,

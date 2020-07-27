@@ -2,8 +2,8 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Add New Employee</h3>
                 <!-- <pre>{{ emp | json }}</pre> -->
+                <h3>{{ emp.id ? "Update" : "Add New" }} Employee</h3>
             </div>
             <div class="modal-body">
                 <div class="form-group">
@@ -17,6 +17,7 @@
                         <option value="indore">Indore</option>
                         <option value="ujjain">Ujjain</option>
                         <option value="mumbai">Mumbai</option>
+                        <option value="mhow">Mhow</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -26,7 +27,7 @@
                 
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" (click)="add()" data-dismiss="modal">Add</button>
+                <button class="btn btn-primary" (click)="add()" data-dismiss="modal">{{ emp.id ? "Update" : "Add" }}</button>
                 <button class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
         </div>

@@ -3,7 +3,7 @@
         <h2 class="text-center">
             Single Page CRUD in Angular
         </h2>
-        <button data-toggle="modal" data-target="#addNew" class="btn btn-success">Add New</button>
+        <button data-toggle="modal" (click)="askAdd()" data-target="#addNew" class="btn btn-success">Add New</button>
         
         <table class="table table-dark table-bordered mt-3">
             <tr>
@@ -11,6 +11,7 @@
                 <th>Name</th>
                 <th>City</th>
                 <th>Salary</th> 
+                <th>Edit</th>
                 <th>Delete</th>
             </tr>
             <tr *ngFor="let emp of empData;let n = index">
@@ -18,9 +19,11 @@
                 <td>{{ emp.name }}</td>
                 <td>{{ emp.city }}</td>
                 <td>{{ emp.salary }}</td>
-                <td><button class="btn btn-danger">Delete</button></td>
+                <td><button class="btn btn-info" data-toggle="modal" data-target="#addNew" (click)="askEdit(emp)">Edit</button></td>
+                <td><button data-target="#delEmp" (click)="askDelete(emp)" data-toggle="modal" class="btn btn-danger">Delete</button></td>
             </tr>
         </table>
     </div>
 </div>
 <app-addnew [emp]="emp" (goToParent)="add($event)"></app-addnew>
+<app-delete [emp]="emp" (sendToParent)="delete($event)"></app-delete>
