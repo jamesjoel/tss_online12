@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-
+  fullName="";
+  name="";
   constructor() { }
 
   ngOnInit() {
+  }
+  demo(){
+    // alert(this.name);
+    this.fullName = this.name;
   }
 
 }

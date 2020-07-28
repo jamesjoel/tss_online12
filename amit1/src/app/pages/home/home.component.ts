@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  gender="";
+  city="";
   name="rohit";
   age = 25;
   obj = {
@@ -18,7 +19,7 @@ export class HomeComponent implements OnInit {
 
   arr = ["red", "green", "blue", "yellow"];
 
-  data = [
+  data = [ // JSON
     {
       name : "jaya",
       age : 25,

@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'; // use [(ngModel)]
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +12,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HelpComponent } from './pages/help/help.component';
 import { BoxComponent } from './shared/box/box.component';
+import { CircleComponent } from './shared/circle/circle.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +22,13 @@ import { BoxComponent } from './shared/box/box.component';
     AboutComponent,
     ContactComponent,
     HelpComponent,
-    BoxComponent
+    BoxComponent,
+    CircleComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

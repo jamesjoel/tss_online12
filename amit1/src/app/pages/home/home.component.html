@@ -9,7 +9,35 @@
 <ul>
     <li *ngFor="let x of arr">{{ x }}</li>
 </ul>
+<h3>{{ name }}</h3>
+<input type="text" [(ngModel)]="name" />
+<Br />
+<Br />
+<Br />
+Gender : <input type="radio" value="male" [(ngModel)]="gender" /> Male
+<input type="radio" value="female" [(ngModel)]="gender" /> Female
+<Br />
+{{ gender }}
+<Br />
+<Br />
+Select : <select [(ngModel)]="city" >
+    <option value="">Select</option>
+    <option value="indore">Indore</option>
+    <option value="bhopal">Bhopal</option>
+    <option value="mumbai">Mumbai</option>
+    <option value="pune">Pune</option>
+</select> {{ city }}
+<Br />
+<Br />
 
+<!-- [(ngModel)] come only with in html <form>
+    text, password, radio, checkbox, select option, textarea    
+
+
+
+
+-->
+<br />
 <table class="table table-dark table-bordered">
     <tr>
         <th>S.No.</th>
