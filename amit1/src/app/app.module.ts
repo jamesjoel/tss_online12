@@ -13,6 +13,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { HelpComponent } from './pages/help/help.component';
 import { BoxComponent } from './shared/box/box.component';
 import { CircleComponent } from './shared/circle/circle.component';
+import { StudentComponent } from './pages/student/student.component';
+import { AddComponent } from './pages/student/shared/add/add.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { CircleComponent } from './shared/circle/circle.component';
     ContactComponent,
     HelpComponent,
     BoxComponent,
-    CircleComponent
+    CircleComponent,
+    StudentComponent,
+    AddComponent
   ],
   imports: [
     BrowserModule,

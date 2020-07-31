@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';// this is Main class 
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { BrowserModule } from '@angular/platform-browser'; // this is for browser event
@@ -25,6 +26,7 @@ import { BlockComponent } from './shared/block/block.component';
 import { EmployeeComponent } from './pages/employee/employee.component';
 import { AddnewComponent } from './pages/employee/shared/addnew/addnew.component';
 import { DeleteComponent } from './pages/employee/shared/delete/delete.component';
+import { UserComponent } from './pages/user/user.component';
 
 
 @NgModule({ // Decorator
@@ -45,12 +47,14 @@ import { DeleteComponent } from './pages/employee/shared/delete/delete.component
     BlockComponent,
     EmployeeComponent,
     AddnewComponent,
-    DeleteComponent
+    DeleteComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,46 @@
+{
+  "student": [
+    {
+      "id": 1,
+      "name": "rohit",
+      "age": 25
+    },
+    {
+      "id": 2,
+      "name": "james",
+      "age": 23
+    },
+    {
+      "id": 3,
+      "name": "jaya",
+      "age": 28
+    },
+    {
+      "id": 4,
+      "name": "gaurav",
+      "age": 30
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": "amit verma",
+      "age": "20"
+    },
+    {
+      "name": "rohit",
+      "age": "25",
+      "id": 4
+    },
+    {
+      "name": "james",
+      "age": "40",
+      "id": 5
+    },
+    {
+      "name": "parul",
+      "age": "25",
+      "id": 7
+    }
+  ]
+}

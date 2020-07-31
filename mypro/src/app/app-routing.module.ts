@@ -10,6 +10,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { StudentComponent } from './pages/student/student.component';
 import { TeacherComponent } from './pages/teacher/teacher.component';
 import { EmployeeComponent } from './pages/employee/employee.component';
+import { UserComponent } from './pages/user/user.component';
 
 const routes: Routes = [
   {
@@ -44,6 +45,10 @@ const routes: Routes = [
   {
     path : "employee",
     component : EmployeeComponent
+  },
+  {
+    path : "user",
+    component : UserComponent
   },
   {
     path : "**",

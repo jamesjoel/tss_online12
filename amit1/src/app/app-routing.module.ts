@@ -5,6 +5,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 
 import { HelpComponent } from './pages/help/help.component';
+import { StudentComponent } from './pages/student/student.component';
 
 
 
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path : "help",
     component : HelpComponent
+  },
+  {
+    path : "student",
+    component : StudentComponent
   }
   
 ];

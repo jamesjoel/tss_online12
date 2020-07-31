@@ -3,6 +3,11 @@
 <br />
 <h3>{{ name }}</h3>
 <br />
+<button class="btn btn-success" (click)="getdata()">Get Data</button>
 <br />
 <br />
 <app-block (childEvent)="hello($event)"></app-block>
+
+<Br />
+<Br />
+<button class="btn btn-primary" (click)="_helloServ.demo(1000)">Click</button>

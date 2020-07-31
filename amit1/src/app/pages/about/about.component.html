@@ -1,7 +1,12 @@
+<h1>{{ test }}</h1>
 <h2>this is about page</h2>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptatum ut temporibus natus id quis incidunt quia placeat. Optio corporis esse nostrum, laboriosam omnis itaque quas nam tempore accusamus repellat? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam numquam a sapiente quo aperiam laudantium, ullam est. Repellat fugiat nesciunt blanditiis qui quae sit deleniti autem. Magni repudiandae repellendus esse. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad maiores eligendi ipsa eos cum dignissimos asperiores. Enim blanditiis, eum eaque architecto, error aspernatur amet modi fuga nulla incidunt nihil expedita!</p>
 
 <input type="Text" [(ngModel)]="name" />
 <button class="btn btn-info" (click)="demo()">OK</button>
 
-<app-circle [childName]="fullName"></app-circle>
+<app-circle 
+    [childName]="fullName"
+    (myEvent)="demo2($event)"
+>
+</app-circle>

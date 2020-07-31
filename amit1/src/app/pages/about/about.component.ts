@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class AboutComponent implements OnInit {
   fullName="";
   name="";
+
+  test="";
   constructor() { }
 
   ngOnInit() {
@@ -15,6 +17,10 @@ export class AboutComponent implements OnInit {
   demo(){
     // alert(this.name);
     this.fullName = this.name;
+  }
+
+  demo2($event){
+   this.test = $event;
   }
 
 }
