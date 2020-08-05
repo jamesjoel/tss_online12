@@ -11,6 +11,9 @@ import { StudentComponent } from './pages/student/student.component';
 import { TeacherComponent } from './pages/teacher/teacher.component';
 import { EmployeeComponent } from './pages/employee/employee.component';
 import { UserComponent } from './pages/user/user.component';
+import { TermsComponent } from './pages/terms/terms.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -49,6 +52,18 @@ const routes: Routes = [
   {
     path : "user",
     component : UserComponent
+  },
+  {
+    path : "terms",
+    component : TermsComponent
+  },
+  {
+    path : "login",
+    component : LoginComponent
+  },
+  {
+    path : "profile",
+    component : ProfileComponent
   },
   {
     path : "**",

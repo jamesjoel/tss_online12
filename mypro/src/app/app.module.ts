@@ -27,6 +27,11 @@ import { EmployeeComponent } from './pages/employee/employee.component';
 import { AddnewComponent } from './pages/employee/shared/addnew/addnew.component';
 import { DeleteComponent } from './pages/employee/shared/delete/delete.component';
 import { UserComponent } from './pages/user/user.component';
+import { TermsComponent } from './pages/terms/terms.component';
+import { HalfPipe } from './pipes/half.pipe';
+import { BonusPipe } from './pipes/bonus.pipe';
+import { LoginComponent } from './pages/login/login.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 
 @NgModule({ // Decorator
@@ -48,7 +53,12 @@ import { UserComponent } from './pages/user/user.component';
     EmployeeComponent,
     AddnewComponent,
     DeleteComponent,
-    UserComponent
+    UserComponent,
+    TermsComponent,
+    HalfPipe,
+    BonusPipe,
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

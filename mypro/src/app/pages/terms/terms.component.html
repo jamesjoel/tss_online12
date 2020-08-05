@@ -1,0 +1,25 @@
+<p>terms works!</p>
+<h2>{{ money | currency }}</h2>
+<h3>{{ name | uppercase }}</h3>
+<h4>{{ d | date:'d-M-y' }}</h4>
+
+<table class="table table-dark table-bordered">
+    <tr>
+        <th>S.No.</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City</th>
+        <th>Salary</th>
+        <th>Bonus</th>
+        <th>Gender</th>
+    </tr>
+    <tr *ngFor="let a of arr; let i = index">
+        <td>{{ i+1 }}</td>
+        <td>{{ a.names }}</td>
+        <td>{{ a.age }}</td>
+        <td>{{ a.city }}</td>
+        <td>{{ a.salary | currency : '&#8377;' }}</td>
+        <td>{{ a.salary | bonus : a.gender : a.age | currency : '&#8377;'}}</td>
+        <td>{{ a.gender }}</td>
+    </tr>
+</table>
