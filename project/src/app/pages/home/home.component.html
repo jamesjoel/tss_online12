@@ -1,0 +1,36 @@
+<p>home works! Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem temporibus beatae, amet at quae quia iure repellat ducimus sed, impedit et quo! Alias sit dolor, non odit ducimus pariatur harum?</p>
+
+<div *ngIf="name=='rohit'; else myCond">
+    
+    <h2>First Condition</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus fugit odit doloremque voluptatum sit, ex iusto, ad aspernatur aperiam quidem, accusantium voluptate cupiditate? Cupiditate tempore est, praesentium rem cumque quisquam.</p>
+</div>
+<ng-template #myCond>
+    <div>
+        <h2>Second Conditon</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, placeat eius. Expedita tempora eveniet quis
+            delectus labore. Optio earum, ipsum et cupiditate omnis qui unde sequi numquam soluta voluptatum fuga! Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Molestiae doloribus quo tempore! Saepe error accusantium
+            quisquam commodi velit, impedit at, ipsum voluptate harum vel officiis ea perferendis tempora provident fugit.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates possimus commodi totam inventore, cum
+            libero, perspiciatis aliquam amet eaque vel harum iste. Est sequi, doloribus perspiciatis amet molestias
+            sapiente iste?</p>
+    </div>
+</ng-template>
+
+<ng-template [ngIf]="city=='indore'" [ngIfElse]="myCond2">
+    <h3>this is indore city</h3>
+</ng-template>
+<ng-template #myCond2>
+    <h3>This is other city</h3>
+</ng-template>
+
+
+
+<div [ngSwitch]="color">
+    <h2 *ngSwitchCase="'green'">color name GREEN</h2>
+    <h2 *ngSwitchCase="'blue'">color name BLUE</h2>
+    <h2 *ngSwitchCase="'yellow'">color name YHELLO</h2>
+    <h2 *ngSwitchCase="'red'">color name RED</h2>
+    <h2 *ngSwitchDefault>NO Color Found</h2>
+</div>

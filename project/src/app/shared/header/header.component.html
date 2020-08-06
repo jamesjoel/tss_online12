@@ -1,0 +1,77 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand logo-font" href="#" id="brand">
+            My Project
+        </a>
+
+        <button class="navbar-toggler order-first" type="button" data-toggle="collapse" data-target="#links"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i>
+        </button>
+        <!-- account toggle -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#account"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-shopping-cart fa-1x" aria-hidden="true"></i>
+            <span class="badge badge-light">88</span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="links">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="">Home</a>
+                </li>
+                
+
+                <ng-template [ngIf]="_loginService.isLoggedIn()" [ngIfElse]="cond">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="cursor: pointer;" (click)="_loginService.logout()">Logout</a>
+                    </li>
+                </ng-template>
+                <ng-template #cond>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="login">Signup</a>
+                    </li>
+                </ng-template>
+
+
+
+                
+                <!-- <li class="nav-item dropdown">
+                    
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Dishes
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Chicken</a>
+                        <a class="dropdown-item" href="#">Mutton/Lamb/Beef 2</a>
+                        <a class="dropdown-item" href="#">Deserts</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Recipies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li> -->
+
+            </ul>
+        </div>
+        <div class="collapse navbar-collapse" id="account">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Shopping Cart
+                        <i class="fa fa-shopping-cart fa-1x" aria-hidden="true"></i>
+                    </a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Log in</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
