@@ -10,6 +10,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { BashboardComponent } from './pages/bashboard/bashboard.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BashboardComponent } from './pages/bashboard/bashboard.component';
     FooterComponent,
     HomeComponent,
     LoginComponent,
-    BashboardComponent
+    BashboardComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

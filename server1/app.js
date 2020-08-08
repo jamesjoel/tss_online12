@@ -64,7 +64,16 @@ app.get("/api/verifytoken", function(req, res){
 });
 
 
-
+app.get("/api/user", backdoor, (req, res)=>{
+    var id = req.userData.id;
+    con.query("SELECT * FROM user1 WHERE id='" + id + "'", function (err, result) {
+        if (err) {
+            return;
+        }
+        result = JSON.parse(JSON.stringify(result))
+        res.send(result);
+    });
+});
 
 
 
