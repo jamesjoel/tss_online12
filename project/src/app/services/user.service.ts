@@ -10,8 +10,13 @@ export class UserService {
   constructor(private _http : HttpClient, private _loginService : LoginService) { }
 
   getUserInfo(){
-    return this._http.get<any>("http://localhost:3000/api/user", {
-      headers : { Authorization : this._loginService.getToken() }
-    });
+    return this._http.get<any>("http://localhost:3000/api/user");
   }
+  /*
+
+
+  return this._http.post<any>("url", obj, {
+    headers : { Authorization : this._loginService.getToken() }
+  })
+  */
 }
