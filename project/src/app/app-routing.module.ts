@@ -5,6 +5,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { BashboardComponent } from './pages/bashboard/bashboard.component';
 import { AuthGuard } from './guards/auth.guard';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { AboutComponent } from './pages/about/about.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,10 @@ const routes: Routes = [
   {
     path : "login",
     component : LoginComponent
+  },
+  {
+    path : "about",
+    component : AboutComponent
   },
   {
     path :"dashboard",

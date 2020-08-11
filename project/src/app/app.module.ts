@@ -13,6 +13,9 @@ import { BashboardComponent } from './pages/bashboard/bashboard.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 
 import { TokenInterceptor } from './intercept/token.interceptor';
+import { AboutComponent } from './pages/about/about.component';
+import { BtnComponent } from './shared/btn/btn.component';
+import { HelloDirective } from './directives/hello.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { TokenInterceptor } from './intercept/token.interceptor';
     HomeComponent,
     LoginComponent,
     BashboardComponent,
-    ProfileComponent
+    ProfileComponent,
+    AboutComponent,
+    BtnComponent,
+    HelloDirective
   ],
   imports: [
     BrowserModule,
