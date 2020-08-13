@@ -6,6 +6,8 @@ import { BashboardComponent } from './pages/bashboard/bashboard.component';
 import { AuthGuard } from './guards/auth.guard';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { AboutComponent } from './pages/about/about.component';
+import { Page1Component } from './pages/page1/page1.component';
+import { Page2Component } from './pages/page2/page2.component';
 
 
 const routes: Routes = [
@@ -25,6 +27,14 @@ const routes: Routes = [
     path :"dashboard",
     component : BashboardComponent,
     canActivate : [AuthGuard]
+  },
+  {
+    path : "page1",
+    component: Page1Component
+  },
+  {
+    path : 'page2',
+    component : Page2Component
   },
   {
     path : "profile",

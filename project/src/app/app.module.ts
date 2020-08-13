@@ -16,6 +16,9 @@ import { TokenInterceptor } from './intercept/token.interceptor';
 import { AboutComponent } from './pages/about/about.component';
 import { BtnComponent } from './shared/btn/btn.component';
 import { HelloDirective } from './directives/hello.directive';
+import { Page1Component } from './pages/page1/page1.component';
+import { Page2Component } from './pages/page2/page2.component';
+import { MydirDirective } from './directives/mydir.directive';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { HelloDirective } from './directives/hello.directive';
     ProfileComponent,
     AboutComponent,
     BtnComponent,
-    HelloDirective
+    HelloDirective,
+    Page1Component,
+    Page2Component,
+    MydirDirective
   ],
   imports: [
     BrowserModule,
