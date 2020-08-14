@@ -1,5 +1,5 @@
 // import { Injectable } from '@angular/core';
-import { HttpRequest, HttpHandler, HttpInterceptor } from '@angular/common/http';
+import { HttpRequest, HttpResponse, HttpHandler, HttpInterceptor } from '@angular/common/http';
 
 
 export class TokenInterceptor implements HttpInterceptor{
@@ -9,11 +9,19 @@ export class TokenInterceptor implements HttpInterceptor{
             let token = localStorage.getItem("token");
             req = req.clone({ headers : req.headers.set("Authorization", token)})
         }
-        return next.handle(req);
+        return next.handle(req); // continue req to its way
     }
 }
 
 /*
+    return this._http.get<any>("localhost:3000/api/user",{
+        headers : { "Authorization" : token }
+    });
+
+
+
+
+
     http://localhost:3000/api/user
 
 

@@ -1,0 +1,95 @@
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <form [formGroup]="user">
+        <div class="card">
+            <div class="card-header">
+                <h3>Signup</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input formControlName="fullname" [ngClass]="{ 'is-invalid' : check && user.controls.fullname.errors }" type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" formControlName="email"  [ngClass]="{ 'is-invalid' : check && user.controls.email.errors }" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" formControlName="password"  [ngClass]="{ 'is-invalid' : check && user.controls.password.errors }" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Re-Password</label>
+                    <input type="password" formControlName="re_password"  [ngClass]="{ 'is-invalid' : check && user.controls.re_password.errors }" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Contact</label>
+                    <input type="text" formControlName="contact" class="form-control"  [ngClass]="{ 'is-invalid' : check && user.controls.contact.errors }" />
+                </div>
+                <div class="form-group">
+                    <label>City</label>
+                    <select class="form-control" formControlName="city"  [ngClass]="{ 'is-invalid' : check && user.controls.city.errors }">
+                        <option value="">Select</option>
+                        <option value="indore">Indore</option>
+                        <option value="bhopal">Bhopal</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Gender</label>
+                    Male<input type="radio"  [ngClass]="{ 'is-invalid' : check && user.controls.gender.errors }" formControlName="gender" value="male" />
+                    Female<input type="radio"  [ngClass]="{ 'is-invalid' : check && user.controls.gender.errors }" formControlName="gender" value="female" />
+                </div>
+                <div class="form-group">
+                    <label>Hobby</label>
+                    Circket <input type='checkbox' />
+                    Football <input type='checkbox' />
+                    Music <input type='checkbox' />
+                    Internet <input type='checkbox' />
+                </div>
+            </div>
+            <div class="card-footer">
+                <input type="button" (click)="submit()" value="Singup" class="btn btn-success" />
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+<!-- 
+    <input type="text" [(ngModel)]="name" /> ---- Databind
+
+    <div class="{{x}}">
+        sdfg dfs dsf
+        sdf
+         sdf
+         sdfg sdfg
+    </div>
+
+    <div [ngClass]="x">   -- property binding
+    </div>
+
+
+    <h2>{{ x }}</h2>
+
+    <h2 [innerHTML]="x"></h2>
+
+
+    <img src="{{ name }}" /> 
+
+    <img [src]="name" /> 
+
+    <a href="{{ name }}" />
+    <a [href]="name" />
+
+    <table border="{{ x }}" >
+
+    <table [border]="x">
+
+
+
+
+
+    {{ condition  ? yes : no }}
+
+
+
+ -->

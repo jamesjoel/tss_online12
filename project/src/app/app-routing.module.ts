@@ -8,6 +8,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { AboutComponent } from './pages/about/about.component';
 import { Page1Component } from './pages/page1/page1.component';
 import { Page2Component } from './pages/page2/page2.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 
 const routes: Routes = [
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path : 'page2',
     component : Page2Component
+  },
+  {
+    path: 'signup',
+    component: SignupComponent
   },
   {
     path : "profile",
