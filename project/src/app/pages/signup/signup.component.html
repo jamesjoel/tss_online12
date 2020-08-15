@@ -9,22 +9,59 @@
                 <div class="form-group">
                     <label>Full Name</label>
                     <input formControlName="fullname" [ngClass]="{ 'is-invalid' : check && user.controls.fullname.errors }" type="text" class="form-control" />
+                    <div *ngIf="check && user.controls.fullname.errors" class="invalid-feedback">
+                        <p *ngIf="user.controls.fullname.errors.required">
+                            Insert Your Full Name
+                        </p>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label>Email</label>
-                    <input type="text" formControlName="email"  [ngClass]="{ 'is-invalid' : check && user.controls.email.errors }" class="form-control" />
+                <label>Email</label>
+                <input type="text" formControlName="email"  [ngClass]="{ 'is-invalid' : check && user.controls.email.errors }" class="form-control" />
+                <div *ngIf="check && user.controls.email.errors" class="invalid-feedback">
+                    <p *ngIf="user.controls.email.errors.required">
+                        Insert Your Email Id
+                    </p>
+                    <p *ngIf="user.controls.email.errors.email">
+                        Email id is not correct
+                    </p>
+                </div>
                 </div>
                 <div class="form-group">
                     <label>Password</label>
                     <input type="password" formControlName="password"  [ngClass]="{ 'is-invalid' : check && user.controls.password.errors }" class="form-control" />
+                    <div *ngIf="check && user.controls.password.errors" class="invalid-feedback">
+                        <p *ngIf="user.controls.password.errors.required">
+                            Insert Your Password
+                        </p>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>Re-Password</label>
                     <input type="password" formControlName="re_password"  [ngClass]="{ 'is-invalid' : check && user.controls.re_password.errors }" class="form-control" />
+                    <div *ngIf="check && user.controls.re_password.errors" class="invalid-feedback">
+                        <p *ngIf="user.controls.re_password.errors.required">
+                            Insert Your Re-Password
+                        </p>
+                        <p *ngIf="user.controls.re_password.errors.myerror">
+                            Insert Your Password and Re-Password is not Matched
+                        </p>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>Contact</label>
                     <input type="text" formControlName="contact" class="form-control"  [ngClass]="{ 'is-invalid' : check && user.controls.contact.errors }" />
+                    <div *ngIf="check && user.controls.contact.errors" class="invalid-feedback">
+                        <p *ngIf="user.controls.contact.errors.required">
+                            Insert Your Contact
+                        </p>
+                        <p *ngIf='user.controls.contact.errors.contacterror'>
+                            Contact Number should be greater then 6
+                        </p>
+                        <p *ngIf='user.controls.contact.errors.isnumerror'>
+                            Contact Number should be in DIGIT
+                        </p>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>City</label>
@@ -33,12 +70,27 @@
                         <option value="indore">Indore</option>
                         <option value="bhopal">Bhopal</option>
                     </select>
+                    <div *ngIf="check && user.controls.city.errors" class="invalid-feedback">
+                        <p *ngIf="user.controls.city.errors.required">
+                            Select Your City
+                        </p>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>Gender</label>
                     Male<input type="radio"  [ngClass]="{ 'is-invalid' : check && user.controls.gender.errors }" formControlName="gender" value="male" />
                     Female<input type="radio"  [ngClass]="{ 'is-invalid' : check && user.controls.gender.errors }" formControlName="gender" value="female" />
+                    <div *ngIf="check && user.controls.gender.errors" class="invalid-feedback">
+                        <p *ngIf="user.controls.gender.errors.required">
+                            Select Your Gender
+                        </p>
+                    </div>
                 </div>
+                <div class="form-group">
+                    <label>Address</label>
+                    <textarea formControlName="address" class="form-control"></textarea>
+                </div>
+
                 <div class="form-group">
                     <label>Hobby</label>
                     Circket <input type='checkbox' />
@@ -48,7 +100,7 @@
                 </div>
             </div>
             <div class="card-footer">
-                <input type="button" (click)="submit()" value="Singup" class="btn btn-success" />
+                <input type="submit" (click)="submit()" value="Singup" class="btn btn-success" />
             </div>
         </div>
         </form>

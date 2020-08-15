@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup }  from '@angular/forms';
+import { PasswordMatch, contactLength, isNumeric } from '../../helpers/custome.validator';
+
 /*
   formbuilder ---- service
   formgroup --- interface
@@ -33,6 +35,22 @@ export class SignupComponent implements OnInit {
 
   constructor(private _fb : FormBuilder) {
 
+    /*
+      {
+        id : 5,
+        fullname : "james",
+        email : "jamse@gmail.com",
+        password : 123,
+        contact : 22558,
+        gender : "male"
+        hobby : ["circket", "music"]
+      }
+
+
+
+
+    */
+
     // name="logo.jpg";
 
     this.user = this._fb.group(
@@ -43,9 +61,15 @@ export class SignupComponent implements OnInit {
         re_password : ["", Validators.required],
         contact : ["", Validators.required],
         city : ["", Validators.required],
-        gender : ["", Validators.required]
-        
-
+        gender : ["", Validators.required],
+        address : [""]
+      },
+      {
+        validator: [
+            PasswordMatch('password', 're_password'), 
+            contactLength('contact'), 
+            isNumeric('contact')
+          ]
       }
     );
 
@@ -55,6 +79,11 @@ export class SignupComponent implements OnInit {
   }
   submit(){
     this.check = true;
+    if(this.user.invalid){
+      return false;
+    }
+    console.log(this.user.value);
+    // continue to service and send data to server
   }
 
 }
