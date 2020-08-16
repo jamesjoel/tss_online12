@@ -93,10 +93,10 @@
 
                 <div class="form-group">
                     <label>Hobby</label>
-                    Circket <input type='checkbox' />
-                    Football <input type='checkbox' />
-                    Music <input type='checkbox' />
-                    Internet <input type='checkbox' />
+                    Circket <input type='checkbox' formControlName="hobby[]" value="cricket" />
+                    Football <input type='checkbox' formControlName="hobby[]" value="football"/>
+                    Music <input type='checkbox' formControlName="hobby[]" value="music"/>
+                    Internet <input type='checkbox' formControlName="hobby[]" value="internet"/>
                 </div>
             </div>
             <div class="card-footer">
@@ -104,6 +104,7 @@
             </div>
         </div>
         </form>
+        <button (click)="demo()">hello</button>
     </div>
 </div>
 <!-- 

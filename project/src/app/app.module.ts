@@ -21,6 +21,7 @@ import { Page1Component } from './pages/page1/page1.component';
 import { Page2Component } from './pages/page2/page2.component';
 import { MydirDirective } from './directives/mydir.directive';
 import { SignupComponent } from './pages/signup/signup.component';
+import { StudentComponent } from './pages/student/student.component';
 
 @NgModule({
   declarations: [ // component, pipes, direvictes
@@ -37,7 +38,8 @@ import { SignupComponent } from './pages/signup/signup.component';
     Page1Component,
     Page2Component,
     MydirDirective,
-    SignupComponent
+    SignupComponent,
+    StudentComponent
   ],
   imports: [ // modules
     BrowserModule,

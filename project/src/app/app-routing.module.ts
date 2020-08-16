@@ -9,6 +9,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { Page1Component } from './pages/page1/page1.component';
 import { Page2Component } from './pages/page2/page2.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { StudentComponent } from './pages/student/student.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,10 @@ const routes: Routes = [
     path :"dashboard",
     component : BashboardComponent,
     canActivate : [AuthGuard]
+  },
+  {
+    path : "student",
+    component : StudentComponent
   },
   {
     path : "page1",
