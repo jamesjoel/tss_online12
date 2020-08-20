@@ -50,6 +50,10 @@ const routes: Routes = [
     path : "profile",
     component : ProfileComponent,
     canActivate : [AuthGuard]
+  },
+  {
+    path : "admin",
+    loadChildren: "./admin/admin.module#AdminModule"
   }
 ];
 
